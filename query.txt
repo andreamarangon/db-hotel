@@ -9,5 +9,6 @@
 9.  SELECT SUM(`beds`) FROM `stanze`
 
 BONUS
-10. SELECT YEAR(`date_of_birth`), COUNT(`id`) FROM `ospiti` GROUP BY YEAR(`date_of_birth`)
-11. SELECT `status`, SUM(`price`) FROM `pagamenti` GROUP BY `status`
+1.  SELECT YEAR(`date_of_birth`), COUNT(`id`) FROM `ospiti` GROUP BY YEAR(`date_of_birth`)
+2.  SELECT `status`, SUM(`price`) FROM `pagamenti` GROUP BY `status`
+3.  SELECT `stanza_id`, COUNT(`id`) FROM `prenotazioni` GROUP BY `stanza_id`
