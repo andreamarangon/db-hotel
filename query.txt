@@ -1,1 +1,2 @@
 1.  SELECT * FROM `ospiti` WHERE `document_type` = 'CI'
+2.  SELECT * FROM `ospiti` WHERE `date_of_birth` > '1988-12-31'
