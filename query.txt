@@ -6,3 +6,4 @@
 6.  SELECT MAX(`price`) FROM `pagamenti`
 7.  SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND `date_of_birth` LIKE '1975%'
 8.  SELECT COUNT(`id`) FROM `paganti` WHERE `ospite_id` <> 'null'
+9.  SELECT SUM(`beds`) FROM `stanze`
