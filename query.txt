@@ -2,3 +2,4 @@
 2.  SELECT * FROM `ospiti` WHERE `date_of_birth` > '1988-12-31'
 3.  SELECT * FROM `ospiti` WHERE `date_of_birth` < '2001-05-06'
 4.  SELECT * FROM `ospiti` WHERE `name` LIKE 'd%'
+5.  SELECT SUM(`price`) FROM `pagamenti` WHERE `status` = 'accepted'
