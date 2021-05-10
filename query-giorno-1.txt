@@ -1,14 +1,16 @@
 1.  SELECT * FROM `ospiti` WHERE `document_type` = 'CI'
 2.  SELECT * FROM `ospiti` WHERE `date_of_birth` > '1988-12-31'
-3.  SELECT * FROM `ospiti` WHERE `date_of_birth` < '2001-05-06'
+3.  SELECT * FROM `ospiti` WHERE `date_of_birth` < NOW() - INTERVAL 20 YEAR
 4.  SELECT * FROM `ospiti` WHERE `name` LIKE 'd%'
 5.  SELECT SUM(`price`) FROM `pagamenti` WHERE `status` = 'accepted'
 6.  SELECT MAX(`price`) FROM `pagamenti`
-7.  SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND `date_of_birth` LIKE '1975%'
-8.  SELECT COUNT(`id`) FROM `paganti` WHERE `ospite_id` <> 'null'
+7.  SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND YEAR(`date_of_birth`) = 1975
+8.  SELECT COUNT( DISTINCT `ospite_id` ) FROM `paganti` WHERE `ospite_id` <> 'null'
 9.  SELECT SUM(`beds`) FROM `stanze`
 
 BONUS
 1.  SELECT YEAR(`date_of_birth`), COUNT(`id`) FROM `ospiti` GROUP BY YEAR(`date_of_birth`)
 2.  SELECT `status`, SUM(`price`) FROM `pagamenti` GROUP BY `status`
 3.  SELECT `stanza_id`, COUNT(`id`) FROM `prenotazioni` GROUP BY `stanza_id`
+4.  SELECT HOUR(`created_at`), COUNT(`id`) FROM `prenotazioni` GROUP BY HOUR(`created_at`) ORDER BY COUNT(`id`) DESC
+5.  SELECT COUNT(`id`) FROM `prenotazioni_has_ospiti` GROUP BY `ospite_id` ORDER BY COUNT(`id`) DESC LIMIT 1
