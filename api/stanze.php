@@ -1,5 +1,5 @@
 <?php
-include __DIR__ .'/../db.php';
+include_once __DIR__ .'/../db.php';
 header('Content-Type: application/json');
 if (!empty($_GET) && $_GET['id']) {
   $id = $_GET['id'];
