@@ -16,7 +16,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v_for="stanza in stanze">
+        <tr v-for="stanza in stanze">
           <td>{{stanza.id}}</td>
           <td @click="getById(stanza.id)">{{stanza.room_number}}</td>
         </tr>

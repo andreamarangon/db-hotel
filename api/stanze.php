@@ -24,6 +24,7 @@ if (!empty($_GET) && $_GET['id']) {
   if ($rows && $rows->num_rows > 0) {
     while($row = $rows->fetch_assoc()) {
      $result[]= $row;
+    }
   }
   echo json_encode([
     "response" => $result,
